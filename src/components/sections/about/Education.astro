@@ -1,0 +1,42 @@
+---
+// components
+import Container from "../../elements/Container.astro";
+import Heading from "../../elements/Heading.astro";
+import ResumeDropdown from "../../elements/ResumeDropdown.astro";
+import ContainerBottom from "../../elements/ContainerBottom.astro";
+
+// assets
+import certImage from "../../../assets/images/certificate-ui-design.jpg";
+
+// content
+const education = [
+    { 
+        title: "Sarjana Informatika",
+        place: "Universitas Battuta",
+        period: "2023 - 2027",
+        text: "Program studi Informatika di Universitas Battuta dengan fokus pada pengembangan website, rekayasa perangkat lunak, pemrograman, basis data, dan desain antarmuka pengguna (UI/UX)."
+    },
+    { 
+        title: "Professional Certificate in UI Design",
+        place: "UX Design Institute",
+        period: "2024",
+        text: "Sertifikasi profesional dalam UI Design dari UX Design Institute yang mencakup perancangan antarmuka, design system, prototyping, visual hierarchy, dan standar industri UI/UX.",
+        image: certImage
+    }
+]
+---
+
+<Container variant={'md'}>
+    <Heading tagName="h2" tagSize="h2" class="text-center">Education</Heading>
+    <div class="flex flex-col gap-4">
+        <Container class="flex flex-col gap-4 p-6 border-3 border-base-900">
+            {
+                education.map((i) => (
+                    <ResumeDropdown title={i.title} place={i.place} period={i.period} text={i.text} image={i.image} />
+                ))
+            }
+        </Container>
+        <ContainerBottom /> 
+    </div>
+    
+</Container>

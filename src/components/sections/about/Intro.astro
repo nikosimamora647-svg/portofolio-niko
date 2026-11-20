@@ -1,0 +1,27 @@
+---
+// components
+import Container from "../../elements/Container.astro";
+import Heading from "../../elements/Heading.astro";
+import Text from "../../elements/Text.astro";
+import ImageContainer from "../../elements/ImageContainer.astro";
+
+// assets
+import peter from "../../../assets/images/peter.jpg";
+---
+
+<Container variant={'xl'}>
+    <Heading tagName="h1" tagSize="h1" class="text-center">Meet Thomas</Heading>
+    <div class="flex md:flex-row flex-col gap-16 md:items-start">
+        <div class="flex-1 flex flex-col gap-6">
+            <Heading tagName="h2" tagSize="h4" class="text-base-900">Tentang Saya</Heading>
+            <Text variant={'xl'} class="text-base-900">Halo! Saya seorang mahasiswa Universitas Battuta yang memiliki kreativitas, semangat belajar, dan ketertarikan besar dalam dunia teknologi, khususnya pengembangan website dan aplikasi.</Text>
+            <Text variant={'sm'} class="text-base-900">Selama menempuh pendidikan di Universitas Battuta, saya telah mencoba membuat berbagai proyek website dan mengembangkan aplikasi sebagai bentuk penerapan ilmu serta pengalaman yang saya dapatkan.</Text>
+            <Text variant={'sm'} class="text-base-900">Bagi saya, desain yang baik bukan hanya tentang membuat sesuatu terlihat menarik, tetapi juga tentang bagaimana menciptakan kemudahan, menyelesaikan masalah, dan memberikan pengalaman yang bermanfaat bagi penggunanya.</Text>
+            <Text variant={'sm'} class="text-base-900">Saya juga ingin menyampaikan rasa terima kasih kepada seluruh dosen Universitas Battuta yang telah membimbing, mengajar, dan membagikan ilmu serta pengalaman selama proses perkuliahan. Setiap pelajaran dan arahan yang diberikan menjadi bekal berharga bagi saya untuk terus berkembang dan menjadi lebih baik.</Text>
+            <Text variant={'sm'} class="text-base-900 font-bold">Perjalanan belajar saya masih panjang. Saya akan terus berusaha, berkarya, dan mengembangkan kemampuan untuk menciptakan sesuatu yang bermanfaat di masa depan.</Text>
+        </div>
+        <div class="flex-1 md:h-[650px] w-full">
+            <ImageContainer src={peter} alt="Thomas"/>
+        </div>
+    </div>
+</Container>

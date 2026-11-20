@@ -1,0 +1,46 @@
+---
+// components
+import Container from "../../elements/Container.astro";
+import ContainerBottom from "../../elements/ContainerBottom.astro";
+import Heading from "../../elements/Heading.astro";
+import Dropdown from "../../elements/Dropdown.astro";
+
+// content
+const faq = [
+    { 
+        title: "Berapa lama waktu pengerjaan proyek?",
+        text: "Waktu pengerjaan bervariasi tergantung ruang lingkup dan kompleksitas. Identitas brand sederhana bisa 3-4 minggu, sementara desain web atau aplikasi komprehensif biasanya 6-12 minggu."
+    },
+    { 
+        title: "Bagaimana struktur harga Anda?",
+        text: "Saya menawarkan harga berbasis proyek maupun per jam tergantung ruang lingkup pekerjaan. Sebagian besar klien lebih suka tarif proyek tetap untuk anggaran yang dapat diprediksi. Saya membutuhkan deposit 50% untuk memulai pekerjaan."
+    },
+    { 
+        title: "Apa saja yang termasuk dalam proses desain Anda?",
+        text: "Proses saya biasanya meliputi discovery dan strategi, riset dan pengembangan konsep, eksplorasi desain, revisi berdasarkan feedback Anda, dan pengiriman akhir semua aset."
+    },
+    { 
+        title: "Apakah Anda bekerja dengan klien secara remote?",
+        text: "Tentu saja! Saya bekerja dengan klien di seluruh Indonesia dan dunia. Saya menggunakan video call untuk pertemuan utama dan platform desain kolaboratif untuk feedback."
+    },
+    { 
+        title: "Berapa banyak revisi yang termasuk?",
+        text: "Sebagian besar proyek mencakup 2-3 putaran revisi untuk memastikan hasil yang sempurna. Saya mendorong feedback yang terkonsolidasi untuk memanfaatkan setiap putaran revisi secara maksimal."
+    },
+]
+---
+
+<Container variant={'md'}>
+    <Heading tagName="h2" tagSize="h2" class="text-center reveal">FAQ</Heading>
+    <div class="flex flex-col gap-4 reveal">
+        <Container class="flex flex-col gap-4 p-6 border-3 border-base-900">
+            {
+                faq.map((q, index) => (
+                    <Dropdown title=`${index + 1}. ${q.title}`  text={q.text} />
+                ))
+            }
+        </Container>
+        <ContainerBottom />        
+    </div>
+    
+</Container>

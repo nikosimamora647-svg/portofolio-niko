@@ -1,0 +1,26 @@
+---
+// components
+import Heading from "../../elements/Heading.astro";
+import Text from "../../elements/Text.astro";
+import Container from "../../elements/Container.astro";
+import Link from "../../elements/Link.astro";
+import ImageContainer from "../../elements/ImageContainer.astro";
+
+// assets
+import peter2 from "../../../assets/images/peter2.jpg";
+---
+
+<Container variant={'xl'}>
+    <Heading tagName="h2" tagSize="h2" class="text-center reveal">About</Heading>
+    <div class="flex lg:flex-row lg:gap-16 gap-10 flex-col">
+        <div class="flex flex-col items-start gap-6 lg:pt-6 text-base-900 lg:flex-1 reveal-left">
+            <Text variant={'xl'}>Saya seorang pemecah masalah kreatif yang berkembang di persimpangan desain, strategi, dan perilaku manusia.</Text>
+            <Text variant={'sm'}>Dengan semangat untuk menciptakan pengalaman yang intuitif dan menyenangkan, saya membantu brand dan startup menerjemahkan tantangan kompleks menjadi solusi elegan yang memberikan dampak berarti.</Text>
+            <Text variant={'sm'}>Di luar waktu desain, saya gemar menjelajahi kafe, bereksperimen dengan fotografi, dan menyelami buku-buku desain. Saya percaya desain terbaik lahir dari pemahaman mendalam tentang manusia.</Text>
+            <Link variant={'button'} href="/about">Lebih Tentang Saya</Link>
+        </div>
+        <div class="w-full lg:h-[500px] h-auto lg:flex-1 reveal">
+            <ImageContainer src={peter2} alt="Thomas Niko Aprijan Simamora" />
+        </div>
+    </div>
+</Container>

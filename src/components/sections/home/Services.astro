@@ -1,0 +1,42 @@
+---
+// components
+import Container from "../../elements/Container.astro";
+import Heading from "../../elements/Heading.astro";
+import Dropdown from "../../elements/Dropdown.astro";
+import ContainerBottom from "../../elements/ContainerBottom.astro";
+
+// content
+const services = [
+    { 
+        title: "Web Design",
+        text: "Saya fokus menciptakan pengalaman digital yang melibatkan pengguna, mengkomunikasikan cerita brand Anda, dan mendorong konversi di semua perangkat."
+    },
+    { 
+        title: "Product Design",
+        text: "Dari sketsa awal hingga prototipe siap produksi, saya menyeimbangkan bentuk dan fungsi untuk menciptakan produk yang beresonansi dengan pengguna dan menonjol di pasar."
+    },
+    { 
+        title: "Branding",
+        text: "Dari desain logo hingga sistem visual lengkap, saya menciptakan pengalaman brand yang kohesif yang membangun pengakuan dan kepercayaan."
+    },
+    { 
+        title: "UI/UX Design",
+        text: "Melalui wawasan berbasis riset dan prinsip desain berpusat pada pengguna, saya menciptakan antarmuka yang memecahkan masalah nyata sambil memberikan pengalaman luar biasa."
+    },
+]
+---
+
+<Container variant={'md'}>
+    <Heading tagName="h2" tagSize="h2" class="text-center reveal">Services</Heading>
+    <div class="flex flex-col gap-4 reveal">
+        <Container class="flex flex-col gap-4 p-6 border-3 border-base-900">
+            {
+                services.map((service, index) => (
+                    <Dropdown title=`${index + 1}. ${service.title}` text={service.text} />  
+                ))
+            }       
+        </Container>
+        <ContainerBottom />    
+    </div>
+
+</Container>
